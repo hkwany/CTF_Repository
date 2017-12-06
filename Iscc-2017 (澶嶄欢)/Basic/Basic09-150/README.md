@@ -1,0 +1,3 @@
+大黑阔在某数据库中提取到了管理员的密码，但是密码是加密的，本要放弃的黑阔突然发现加密竟然是可逆的，网页上的脚本被黑阔提取出来了，你能够帮助黑阔解密吗？黑阔感激不尽
+加密数据：fR4aHWwuFCYYVydFRxMqHhhCKBseH1dbFygrRxIWJ1UYFhotFjA=
+

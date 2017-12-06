@@ -1,0 +1,3 @@
+Relax!This is just a test!
+NJCTF{N0_WH4t_TH3He11_ExE}
+Oh,shit!!Did I release the flag?!!!

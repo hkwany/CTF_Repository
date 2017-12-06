@@ -1,0 +1,70 @@
+Hackeme:
+#include <iostream>
+using namespace std;
+char password[22]={0};
+unsigned char Constant_num[22]={0x5f,0xf2,0x5e,0x8b,0x4e,0x0e,0xa3,0xaa,0xc7,0x93,0x81,0x3d,0x5f,0x74,0xa3,0x09,0x91,0x2b,0x49,0x28,0x93,0x67};
+int Rand[22]={0};
+int main()
+{	
+	int index;
+	int rand;
+	int loop;
+	int loop_num;
+	for(index=0;index<22;index++){
+		rand=0;
+		loop=0;
+		loop_num=index+1;
+		while(loop<loop_num){
+			loop++;
+			rand=0x6d01788d*rand+12345;
+		}
+		Rand[index]=rand;
+		password[index]=(Rand[index]&0xff)^Constant_num[index];
+		printf("%c",password[index]);
+	}
+   return 0;
+}
+
+debug.exe:
+using System;
+using System.Security.Cryptography;
+using System.Text;
+
+namespace HelloWorldApplication{
+	class net{
+		public static int A(int A_0, int A_1){
+		    return new int[30]{2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,107,109,113}[A_1] ^ A_0;
+		}
+		public static string B(string A_0){
+		    return "flag{" + BitConverter.ToString(new MD5CryptoServiceProvider().ComputeHash(Encoding.ASCII.GetBytes(A_0))).Replace("-", "") + "}";
+		}
+
+		public static void C(string A_0, int A_1, ref string A_2){
+		    int index = 0;
+		    if (0 < A_0.Length){
+				do{
+					char ch = A_0[index];
+					int A_1_1 = 1;
+					do{
+						ch = Convert.ToChar(net.A(Convert.ToInt32(ch), A_1_1));
+						++A_1_1;
+					}
+					while (A_1_1 < 15);
+					A_2 = A_2 + (object) ch;
+					++index;
+				}
+				while (index < A_0.Length);
+		    }
+		    A_2 = net.B(A_2);
+		}
+	}
+	
+	class HelloWorld{
+		static void Main(string[] args){
+			string A_2 = (string) null;
+			net.C("CreateByTenshine", Convert.ToInt32(string.Format("{0}", (object) (DateTime.Now.Hour + 1))), ref A_2);
+			Console.WriteLine(A_2);
+		}
+	}
+}
+}

@@ -1,0 +1,1 @@
+"Cool! I encoded the secret during the compile time!"

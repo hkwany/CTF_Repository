@@ -1,0 +1,31 @@
+Mercury Contributors
+====================
+
+Mercury is open source software, and we rely on our contributors to help make
+it great. We would like to thank everybody who has reported issues, made
+feature requests and shared their insight with us.
+
+In particular, we would like to thank those who have contributed code to the
+project:
+
+  - MWR InfoSecurity (@mwrlabs)
+    - Mike
+    - Nils
+    - Rob
+    - Tyrone
+  - Luander (luander.r@samsung.com)
+  - Rodrigo Chiossi (r.chiossi@samsung.com)
+
+
+How to Contribute
+-----------------
+
+If you would like to report a bug, or request a feature, please see our issue
+tracking page on Github.
+
+If you would like to contribute new modules, a bug fix or a new feature
+implementation, please fork our develop branch, make your changes and issue a
+pull request (against the develop branch).
+
+There should be a 1:1 correlation between bug fixes/features/modules and pull
+requests.
